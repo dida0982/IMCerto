@@ -1,0 +1,79 @@
+/* Estilos básicos e configurações de layout */
+body, html {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Remove a margem padrão */
+    width: 100%;
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
+/* Estilização do container principal */
+.container {
+    background: #B0E0E6; /* Verde água */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%; /* Ajuste para melhor visualização em dispositivos */
+    max-width: 500px; /* Limita a largura máxima */
+}
+
+/* Estilos para formulários para manter a consistência */
+form > label {
+    display: block; /* Torna cada label um bloco para melhor fluxo */
+    margin-bottom: 10px; /* Espaçamento consistente */
+}
+
+/* Estilização uniforme para inputs do tipo number */
+input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Ajustado para simplificar o cálculo */
+    box-sizing: border-box; /* Inclui padding e borda no width */
+}
+
+/* Botões com melhor feedback visual e acessibilidade */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Suaviza a transição de cor */
+}
+
+button:hover, button:focus {
+    background-color: #0056b3; /* Consistência no hover e focus */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Torna o container mais estreito em tablets */
+        padding: 10px;
+    }
+
+    input[type="number"], button {
+        width: 100%; /* Ajusta a largura para ocupar o espaço disponível */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Diminui o tamanho da fonte para caber em telas menores */
+    }
+
+    .container {
+        width: 100%; /* Utiliza toda a largura disponível */
+        border-radius: 0; /* Remove os bordos arredondados */
+    }
+
+    form > label {
+        margin-bottom: 8px; /* Menor espaçamento entre elementos */
+    }
+}
